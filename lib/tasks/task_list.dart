@@ -22,7 +22,7 @@ const List<Task> chapter3TaskList = [
   ),
   Task(
     taskModel: t_3_3_8_5,
-    // solution: S3385(),
+     solution: S3385(),
   ),
   Task(
     taskModel: t_3_3_8_6,
