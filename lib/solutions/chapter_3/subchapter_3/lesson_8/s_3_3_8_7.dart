@@ -2,12 +2,25 @@ import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
+import 'package:task_app/solutions/chapter_3/subchapter_3/lesson_8/s_3_3_8_5.dart';
 
 /// This functions tries to hack a 4 digit PIN.
 /// It returns the PIN as a string.
 String hackPin() {
-  // Lösung hier einfügen
-  throw UnimplementedError();
+  bool foundCorrectPin = false;
+  String pin = "";
+
+for (var i = 0; i < 10000; i++) {
+  foundCorrectPin = _isPinCorrect(i.toString().padLeft(4, "0"));
+  
+  if (foundCorrectPin) {
+    pin = i.toString().padLeft(4, "0");
+    break;
+  }
+}
+
+  return pin;
+
 }
 
 // ignore: unused_element
