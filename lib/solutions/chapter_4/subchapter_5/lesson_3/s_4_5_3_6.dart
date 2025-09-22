@@ -13,9 +13,10 @@ class S4536 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      shrinkWrap: true,
+        shrinkWrap: true,
         children: products
             .map((product) => ListTile(
+                  leading: Icon(Icons.shopping_cart),
                   title: Text(product.name),
                   subtitle: Text("€${product.price.toStringAsFixed(2)}"),
                 ))
